@@ -1,7 +1,7 @@
 package training.weather;
 
 
-public class WeatherStatus {
+public class GetWeatherStatusResponse {
 
 	public class consolidated_weather{
 		public String id;

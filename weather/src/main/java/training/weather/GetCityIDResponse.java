@@ -1,6 +1,6 @@
 package training.weather;
 
-public class CityID {
+public class GetCityIDResponse {
 
 	public String title;
 	public String location_type;

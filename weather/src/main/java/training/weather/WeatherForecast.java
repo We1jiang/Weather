@@ -1,6 +1,6 @@
 package training.weather;
 
-import training.weather.WeatherStatus.consolidated_weather;
+import training.weather.GetWeatherStatusResponse.consolidated_weather;
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpResponse;
@@ -29,7 +29,7 @@ public class WeatherForecast {
 
 				if (response.getStatusCode() == UtilWeather.OK) {
 
-					CityID[] cityID = gson.fromJson(response.parseAsString(), CityID[].class);
+					GetCityIDResponse[] cityID = gson.fromJson(response.parseAsString(), GetCityIDResponse[].class);
 					
 					if (cityID.length == 0)
 						return UtilWeather.Error_InvalidParameter;
@@ -40,7 +40,7 @@ public class WeatherForecast {
 
 					if (response.getStatusCode() == UtilWeather.OK) {
 
-						WeatherStatus result = gson.fromJson(response.parseAsString(), WeatherStatus.class);
+						GetWeatherStatusResponse result = gson.fromJson(response.parseAsString(), GetWeatherStatusResponse.class);
 						return parseResponse(result, datetime);
 					}
 				}
@@ -56,7 +56,7 @@ public class WeatherForecast {
 
 	}
 
-	public String parseResponse(WeatherStatus results, LocalDate datetime) {
+	public String parseResponse(GetWeatherStatusResponse results, LocalDate datetime) {
 		
 		String targetDate = datetime.format(DateTimeFormatter.ofPattern(UtilWeather.dateFormat));
 
