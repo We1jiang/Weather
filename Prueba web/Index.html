@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>My site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Index.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="FormValidation.js"></script>
+
+  </head>
+
+  <body>
+   <div class="formulario">
+    <form>
+
+        <label>Nombre</label>
+        <input type="text" placeholder="Escribe el nombre" name="nombre" id="nombre">
+
+        <label>Apellido</label>
+        <input type="text" placeholder="Escribe los apellidos" name="apellido" id="apellido">
+
+        <label>Telefono</label>
+        <input type="tel" placeholder="Introduce el número" name="telefono" id="telefono">
+
+        <label>Email</label>
+        <input type="email" class="emailInput" placeholder="&#xf0e0;  introduce el correo" name="email" id ="email">
+
+        <label>Genero</label>
+        <select id ="genero" name="genero">
+          <option value ="Masculino">Masculino</option>
+          <option value ="Femenino">Femenino</option>
+        </select>
+
+        <button type="button" onclick="validateForm();">Guardar</button>
+
+        <!--<input type="button" value="Guardar" name="name" onclick="validateForm();"> -->
+
+    </form>
+   </div>
+
+
+
+  </body>
+</html>
