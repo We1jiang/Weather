@@ -23,12 +23,5 @@ public class WeatherForecastTest {
 		
 		assertEquals(UtilWeather.Error_InvalidParameter,forecast);
 	}
-	
-	@Test
-	public void validateConnection() {
 		
-		
-	}
-	
-	
 }
